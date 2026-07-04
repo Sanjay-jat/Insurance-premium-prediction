@@ -267,7 +267,7 @@ Example Response
 }
 ```
 
-
+```
 # 👨‍💻 Author
 
 **Sanjay Jat**
@@ -283,7 +283,7 @@ https://github.com/Sanjay-jat
 LinkedIn:
 
 https://www.linkedin.com/in/sanjay-jat
-
+```
 ---
 
 # ⭐ If you like this project
