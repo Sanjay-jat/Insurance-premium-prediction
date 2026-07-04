@@ -267,20 +267,6 @@ Example Response
 }
 ```
 
----
-
-# 📈 Future Improvements
-
-- Authentication
-- Premium Cost Estimation
-- Explainable AI (SHAP)
-- Feature Importance Visualization
-- User History
-- Database Integration
-- CI/CD Pipeline
-- Kubernetes Deployment
-
----
 
 # 👨‍💻 Author
 
@@ -288,7 +274,7 @@ Example Response
 
 B.Tech Computer Science Engineering
 
-Machine Learning | Data Science | AI
+Machine Learning Enthusiast
 
 GitHub:
 
@@ -296,7 +282,7 @@ https://github.com/Sanjay-jat
 
 LinkedIn:
 
-(Add your LinkedIn URL)
+https://www.linkedin.com/in/sanjay-jat
 
 ---
 
