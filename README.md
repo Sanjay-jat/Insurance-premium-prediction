@@ -282,9 +282,9 @@ https://github.com/Sanjay-jat
 
 LinkedIn:
 
-https://www.linkedin.com/in/sanjay-jat
----
+https://www.linkedin.com/in/sanjay-jat/
 
+---
 # ⭐ If you like this project
 
 Give this repository a ⭐ on GitHub!
