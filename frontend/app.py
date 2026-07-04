@@ -141,15 +141,46 @@ with col2:
 
     st.markdown(f"""<div style="background:white;padding:20px;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,.1);text-align:center;margin-top:20px;"><h3 style="color:#555;">BMI Status</h3><h2 style="color:#111827;">{bmi_status}</h2></div>""", unsafe_allow_html=True)
 
-    if smoker == "yes" and bmi_status in ["Overweight", "Obese"]:
+    # Calculate lifestyle risk based on all inputs
+    risk_score = 0
+    
+    # BMI factor
+    if bmi_status in ["Overweight", "Obese"]:
+        risk_score += 2
+    
+    # Smoker factor
+    if smoker == "yes":
+        risk_score += 2
+    
+    # Age factor
+    if age >= 50:
+        risk_score += 1
+    elif age >= 40:
+        risk_score += 0.5
+    
+    # Weight factor (relative to height)
+    if weight > 100:
+        risk_score += 0.5
+    
+    # Region factor
+    if region in ["southwest", "southeast"]:
+        risk_score += 0.3
+    
+    # Determine risk level
+    if risk_score >= 3.5:
         lifestyle_risk = "High"
-        lifestyle_note = "Smoking and BMI may increase risk."
-    elif smoker == "yes" or bmi_status in ["Overweight", "Obese"]:
+        lifestyle_note = "Multiple risk factors detected."
+    elif risk_score >= 1.5:
         lifestyle_risk = "Moderate"
-        lifestyle_note = "One or more risk factors are present."
+        lifestyle_note = "Some risk factors present."
     else:
         lifestyle_risk = "Low"
-        lifestyle_note = "Current lifestyle inputs look healthier."
+        lifestyle_note = "Healthy lifestyle profile."
+    
+    # Special condition: high age + extreme BMI should not be low risk
+    if age >= 50 and bmi_status in ["Underweight", "Obese"] and lifestyle_risk == "Low":
+        lifestyle_risk = "Moderate"
+        lifestyle_note = f"High age combined with {bmi_status} indicates moderate risk."
 
     st.markdown(f"""<div style="background:white;padding:20px;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,.1);text-align:center;margin-top:20px;"><h3 style="color:#555;">Lifestyle Risk</h3><h2 style="color:#111827;">{lifestyle_risk}</h2><p style="color:#6b7280;margin:0;">{lifestyle_note}</p></div>""", unsafe_allow_html=True)
 
