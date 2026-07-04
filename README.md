@@ -45,7 +45,7 @@ https://insurance-premium-api-8l5n.onrender.com/docs
 
 > Replace with your screenshot
 
-![Home](images/home.png)
+![Home](images/Home.png)
 
 ---
 
