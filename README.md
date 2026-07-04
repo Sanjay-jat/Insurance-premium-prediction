@@ -43,15 +43,11 @@ https://insurance-premium-api-8l5n.onrender.com/docs
 
 ## Home Page
 
-> Replace with your screenshot
-
 ![Home](images/Home.png)
 
 ---
 
 ## Prediction Result
-
-> Replace with your screenshot
 
 ![Prediction](images/prediction.png)
 
