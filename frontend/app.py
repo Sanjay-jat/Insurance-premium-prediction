@@ -170,8 +170,8 @@ if st.button("Predict Premium"):
 
     with st.spinner("Predicting..."):
 
-        response=requests.post(
-            "http://127.0.0.1:8000/predict",
+        response = requests.post(
+            "https://insurance-premium-api-8l5n.onrender.com/predict",
             json=payload
         )
 
